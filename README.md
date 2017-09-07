@@ -81,7 +81,7 @@ Disables the trigger handler if `true`. Note: this has no effect other than appl
 ### `transitionTime` | *number* | default: 400
 The number of milliseconds for the open/close transition to take.
 
-### `easing` | *string* | default: 'linear'
+### `easing` | *string* | default: 'liner'
 The CSS easing method you wish to apply to the open/close transition. This string can be any valid value of CSS `transition-timing-function`. For reference view the [MDN documentation](https://developer.mozilla.org/en/docs/Web/CSS/transition-timing-function).
 
 ### `open` | *bool* | default: false
@@ -113,12 +113,6 @@ Unique key used to identify the `Collapse` instance when used in an accordion.
 
 ### `handleTriggerClick` | *function*
 Define this to override the click handler for the trigger link. Takes one parameter, which is `props.accordionPosition`.
-
-### `onOpen` | *function*
-Is called when the Collapsible is opening.
-
-### `onClose` | *function*
-Is called when the Collapsible is closing.
 
 ### `lazyRender` | *bool* | default: false
 Set this to true to postpone rendering of all of the content of the Collapsible until before it's opened for the first time

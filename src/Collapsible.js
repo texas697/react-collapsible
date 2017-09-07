@@ -1,14 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types'
+var createReactClass = require('create-react-class');
 
-class Collapsible extends Component {
-  render() {
-    return <div>Collapsible a</div>;
-  }
-}
-
-/*
-var oldCollapsible = createReactClass({
+var Collapsible = createReactClass({
 
   //Set validation for prop types
   propTypes: {
@@ -23,8 +17,6 @@ var oldCollapsible = createReactClass({
     contentInnerClassName: PropTypes.string,
     accordionPosition: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     handleTriggerClick: PropTypes.func,
-    onOpen: PropTypes.func,
-    onClose: PropTypes.func,
     trigger: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.element
@@ -64,8 +56,6 @@ var oldCollapsible = createReactClass({
       contentInnerClassName: '',
       className: '',
       triggerSibling: null,
-      onOpen: () => {},
-      onClose: () => {},
     };
   },
 
@@ -178,7 +168,7 @@ var oldCollapsible = createReactClass({
       shouldSwitchAutoOnNextCycle: true,
       height: this.refs.inner.offsetHeight,
       overflow: 'hidden',
-    }, this.props.onClose);
+    });
   },
 
   openCollapsible: function() {
@@ -187,7 +177,7 @@ var oldCollapsible = createReactClass({
       transition: 'height ' + this.props.transitionTime + 'ms ' + this.props.easing,
       isClosed: false,
       hasBeenOpened: true
-    }, this.props.onOpen);
+    });
   },
 
   makeResponsive: function() {
@@ -247,13 +237,13 @@ var oldCollapsible = createReactClass({
     if (this.state.isClosed) {
       triggerClassName = triggerClassName + ' ' + this.props.triggerClassName;
     } else {
-      triggerClassName = triggerClassName + ' ' + this.props.triggerOpenedClassName;
+      triggerClassName = triggerClassName + ' ' + this.props.triggerOpenedClassName;      
     }
 
     return(
       <div className={this.props.classParentString + ' ' + (this.state.isClosed ? this.props.className : this.props.openedClassName)}>
         <span className={triggerClassName.trim()} onClick={this.handleTriggerClick}>{trigger}</span>
-
+        
         {this.renderNonClickableTriggerElement()}
 
         <div className={this.props.classParentString + "__contentOuter" + ' ' + this.props.contentOuterClassName } ref="outer" style={dropdownStyle}>
@@ -266,5 +256,4 @@ var oldCollapsible = createReactClass({
   }
 });
 
-*/
 export default Collapsible;
