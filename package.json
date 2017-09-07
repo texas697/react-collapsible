@@ -113,7 +113,7 @@
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/glennflanagan/react-collapsible.git"
+    "url": "https://github.com/texas697/react-collapsible.git"
   },
   "scripts": {
     "build": "babel src/Collapsible.js > dist/Collapsible.js",
