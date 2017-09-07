@@ -17,6 +17,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var createReactClass = require('create-react-class');
 
 var Collapsible = createReactClass({
+  displayName: 'Collapsible',
+
 
   //Set validation for prop types
   propTypes: {
